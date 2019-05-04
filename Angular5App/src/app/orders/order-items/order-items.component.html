@@ -1,0 +1,48 @@
+<h4 class = "display-4">
+  Order Food Item
+</h4>
+<hr>
+<form #form = "ngForm" autocomplete="off" (submit) = "onSubmit(form)">
+    <input type="hidden" name = "OrderItemID" #OrderItemID = "ngModel" [(ngModel)] = "formData.OrderItemID">  
+    <input type="hidden" name = "OrderID" #OrderID = "ngModel" [(ngModel)] = "formData.OrderID">  
+    <input type="hidden" name = "ItemName" #ItemName = "ngModel" [(ngModel)] = "formData.ItemName">  
+
+  <div class="form-group">
+    <label>Food Item</label>
+      <select [class.is-invalid] = "!isValid && formData.ItemID ==0" (change) = "updatePrice($event.target)" name = "ItemID" #ItemID = "ngModel" [(ngModel)] = "formData.ItemID" class="form-control modsize">
+        <option value="0">-Select-</option>
+        <option *ngFor = "let item of itemList" value="{{item.ItemID}}">{{item.Name}}</option>
+      </select>
+  </div>
+  <div class = "form-row">
+    <div class="form-group col-md-6 paddingLeftRight0">
+        <label for="">Price</label>
+        <div class="input-group">
+          <div class="input-group-addon">
+            <div class="input-group-text">$
+            </div>
+          </div>
+          <input name="Price" #Price = "ngModel" [(ngModel)] = "formData.Price" class="form-control" readonly>
+        </div>
+    </div>
+    <div class="form-group col-md-6 paddingLeftRight0">
+        <label for="">Quantity</label>
+          <input [class.is-invalid] = "!isValid && formData.Quantity == 0" (keyup) = "updateTotal()" name="Quantity" #Quantity = "ngModel" [(ngModel)] = "formData.Quantity" class="form-control modsize quantity">
+    </div>
+  </div>
+    <div class="form-group">
+      <label for="">Total</label>
+      <div class="input-group total">
+        <div class="input-group-addon">
+          <div class="input-group-text">$
+          </div>
+        </div>
+        <input name="Total" #Total = "ngModel" [(ngModel)] = "formData.Total" class="form-control" readonly style="width: 568px!important;">
+      </div>
+  </div>
+  
+<div class="form-group">
+  <button class="btn btn-dark mr5" type="submit"><i class="fa fa-database mr5"></i>Submit</button>
+  <button class="btn btn-outline-dark" [mat-dialog-close] type="button"><i class="fa fa-close mr5"></i>Close</button>
+</div>
+</form>

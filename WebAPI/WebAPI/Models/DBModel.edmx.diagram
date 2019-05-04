@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0c8679111385439d80db7a681ac7cf3a" Name="Diagram1" ZoomLevel="85">
+        <EntityTypeShape EntityType="Angular5AppDBConnectionStringModel.C__MigrationHistory" Width="1.5" PointX="5.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Angular5AppDBConnectionStringModel.Customer" Width="1.5" PointX="5.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="Angular5AppDBConnectionStringModel.Item" Width="1.5" PointX="8" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Angular5AppDBConnectionStringModel.Order" Width="1.5" PointX="8" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Angular5AppDBConnectionStringModel.OrderItem" Width="1.5" PointX="10.25" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Angular5AppDBConnectionStringModel.Role" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Angular5AppDBConnectionStringModel.sysdiagram" Width="1.5" PointX="7.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Angular5AppDBConnectionStringModel.User" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Angular5AppDBConnectionStringModel.UserClaim" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Angular5AppDBConnectionStringModel.UserLogin" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="Angular5AppDBConnectionStringModel.UserRole" Width="1.5" PointX="6" PointY="4.5" IsExpanded="true" />
+        <AssociationConnector Association="Angular5AppDBConnectionStringModel.FK_Order_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="Angular5AppDBConnectionStringModel.FK_OrderItems_Item" ManuallyRouted="false" />
+        <AssociationConnector Association="Angular5AppDBConnectionStringModel.FK_OrderItems_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="Angular5AppDBConnectionStringModel.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" ManuallyRouted="false" />
+        <AssociationConnector Association="Angular5AppDBConnectionStringModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="Angular5AppDBConnectionStringModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="Angular5AppDBConnectionStringModel.FK_dbo_UserRole_dbo_User_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="Angular5AppDBConnectionStringModel.FK_UserRole_UserRole" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

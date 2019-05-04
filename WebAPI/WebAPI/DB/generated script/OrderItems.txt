@@ -1,0 +1,38 @@
+USE [Angular5AppDBConnectionString]
+GO
+
+/****** Object:  Table [dbo].[OrderItems]    Script Date: 2/21/2019 8:33:10 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[OrderItems](
+	[OrderItemID] [bigint] IDENTITY(1,1) NOT NULL,
+	[OrderID] [bigint] NULL,
+	[ItemID] [int] NULL,
+	[Quantity] [int] NULL,
+ CONSTRAINT [PK_OrderItems] PRIMARY KEY CLUSTERED 
+(
+	[OrderItemID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+ALTER TABLE [dbo].[OrderItems]  WITH CHECK ADD  CONSTRAINT [FK_OrderItems_Item] FOREIGN KEY([ItemID])
+REFERENCES [dbo].[Item] ([ItemID])
+GO
+
+ALTER TABLE [dbo].[OrderItems] CHECK CONSTRAINT [FK_OrderItems_Item]
+GO
+
+ALTER TABLE [dbo].[OrderItems]  WITH CHECK ADD  CONSTRAINT [FK_OrderItems_Order] FOREIGN KEY([OrderID])
+REFERENCES [dbo].[Order] ([OrderID])
+GO
+
+ALTER TABLE [dbo].[OrderItems] CHECK CONSTRAINT [FK_OrderItems_Order]
+GO
+
+
