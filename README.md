@@ -11,3 +11,8 @@ Code First Approach:
    Project directory\Angular5App using this command
    ng-serve --open 
 6. Run the mvc web api project as well.	
+
+Feel free to have any help regarding deploying issue:
+MD TARIKUL ISLAM
+SKYPE: tarikulislam789
+CONTACT: 01926228731
