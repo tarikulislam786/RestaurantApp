@@ -1,5 +1,5 @@
 Deployment process of Angular7WebAPI:
-
+Code First Approach
 1. open sql server management studio - 2014
 2. open visual studio 2017 ide & open package manager console
    then type update-database. This command will create db & seed
